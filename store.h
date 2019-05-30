@@ -17,6 +17,7 @@
  */
 #pragma once
 #include <iostream>
+#include <fstream>
 #include "customerDatabase.h"
 #include "inventoryDatabase.h"
 #include "transaction.h"
@@ -30,7 +31,7 @@ public:
 	// builds store by creating movie database and customer database objects
 	void buildStore(ifstream& customerList, ifstream& inventoryList);
 
-	void commandsReader(ifstream& commandsList);             // process command lines
+	void processCommands(ifstream& commandsList);             // process command lines
 
 private:
 	
