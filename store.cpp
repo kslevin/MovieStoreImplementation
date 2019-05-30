@@ -7,6 +7,4 @@ Store::Store()
 }
 
 
-Store::~Store()
-{
-}
+

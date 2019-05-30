@@ -17,22 +17,27 @@
  */
 #pragma once
 #include <iostream>
+#include "customerDatabase.h"
+#include "inventoryDatabase.h"
+#include "transaction.h"
 
 using namespace std;
 class Store
 {
 
 public:
+	Store();
 	// builds store by creating movie database and customer database objects
 	void buildStore(ifstream& customerList, ifstream& inventoryList);
 
 	void commandsReader(ifstream& commandsList);             // process command lines
 
 private:
+	
 
 	CustomerDatabase allCustomers;                     // Customer Database object
 	InventoryDatabase allInventory;                   // Inventory Database object
-	Transactions allTransactions;                     // Transactions object
+	Transaction allTransactions;                     // Transactions object
 };
 
 
